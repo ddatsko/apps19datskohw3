@@ -4,6 +4,10 @@ package ua.edu.ucu.smartarr;
 public class BaseArray implements SmartArray {
     private Object[] array;
 
+    public BaseArray(Object[] source) {
+        this.array = source.clone();
+    }
+
     @Override
     public Object[] toArray() {
         return array.clone();
@@ -17,9 +21,5 @@ public class BaseArray implements SmartArray {
     @Override
     public int size() {
         return array.length;
-    }
-
-    public BaseArray(Object[] source) {
-        this.array = source.clone();
     }
 }
