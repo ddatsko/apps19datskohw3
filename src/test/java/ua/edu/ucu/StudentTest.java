@@ -34,6 +34,17 @@ public class StudentTest {
     }
 
     @Test
+    public void testStudentEqualsWithInt() {
+        assertNotEquals(student, 1);
+    }
+
+    @Test
+    public void testStudentEqualsSameHashCode() {
+        Student newStudent = new Student("Denys", "Datsko", 5.2, 2);
+        assertNotEquals(student, newStudent);
+    }
+
+    @Test
     public void testStudentToString() {
         String expected = "Student{name=Denys, surname=Datsko, "
                 + "GPA=5.0, year=2}";
